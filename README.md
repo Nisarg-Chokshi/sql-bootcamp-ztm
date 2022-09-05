@@ -51,6 +51,14 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 **Query(SQL statement) :** &nbsp; **`SELECT colName AS newName FROM tableName WHERE condition;`**
 
+**WHERE** clause allows us to filter data based on specified condition (based on text field or numerical field)
+
+**AND** keyword will chain all the criterias for filtering, **OR** will create a new filter. When combining **AND** & **OR**, be sure to enclose the individual clauses in parentheses
+
+**NOT** is used to get records where the condition(s) is not true
+
+**Comparison Operators :** Mostly used with numerical filtering (**＜**, **＞**, **＜＝**, **＞＝**, **＝**, **!＝** or **＜＞**)
+
 **Aliasing :** Assigning a temporary name to attributes to make the results more readable.
 * Ex. &nbsp; **`SELECT colName AS newName FROM tableName;`**
 
@@ -73,10 +81,10 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 **CONCAT** - Adds two or more strings - **`SELECT CONCAT(firstName, ' ', lastName) AS name FROM tableName;`**
 
-* In **WHERE** clause, **AND** keyword will chain all the criterias for filtering, **OR** will create a new filter
 
 <h2 align="center"> 📚 References & Useful Links 🔗</h2>
 
+* [<img align="center" src="https://shields.io/badge/github-Complete_SQL_Database_Bootcamp_Zero_to_Mastery-important?logo=github&style=social" />](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery)
 * [Brief Overview of DB Landscape](https://www.ibm.com/cloud/blog/brief-overview-database-landscape)
 * [12 Rules of CODD (Dr. Edgar Frank Codd - Inventor of RDMBS) ](https://www.w3resource.com/sql/sql-basic/codd-12-rule-relation.php)
 * [Why PostgreSQL is the world's best DB ?](https://www.2ndquadrant.com/en/blog/postgresql-is-the-worlds-best-database/#:~:text=PostgreSQL%20just%20does%20it.,response%20times%20can%20be%20managed.)
