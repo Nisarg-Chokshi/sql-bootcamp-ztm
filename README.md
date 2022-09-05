@@ -51,15 +51,14 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 **Query(SQL statement) :** &nbsp; **`SELECT colName AS newName FROM tableName WHERE condition;`**
 
+**Aliasing :** Assigning a temporary name to attributes to make the results more readable.
+* Ex. &nbsp; **`SELECT colName AS newName FROM tableName;`**
 
 |                         **Type of Function**                        |       **Examples**        |
 |---------------------------------------------------------------------|---------------------------|
 | **AGGREGATE** - Operates on all the data & produces a single output | AVG, SUM, COUNT, MIN, MAX |
 | **SCALAR(Non-Aggregate)** - Operates on each row independently      | CONCAT                    |
 
-
-**Aliasing :** Assigning a temporary name to attributes to make the results more readable.
-* Ex. &nbsp; **`SELECT colName AS newName FROM tableName;`**
 
 **AVG** - Returns the Average of a given set of values - **`SELECT AVG(colName) FROM tableName;`**
 
@@ -73,6 +72,8 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 <br>
 
 **CONCAT** - Adds two or more strings - **`SELECT CONCAT(firstName, ' ', lastName) AS name FROM tableName;`**
+
+* In **WHERE** clause, **AND** keyword will chain all the criterias for filtering, **OR** will create a new filter
 
 <h2 align="center"> 📚 References & Useful Links 🔗</h2>
 
