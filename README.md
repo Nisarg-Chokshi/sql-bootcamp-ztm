@@ -48,16 +48,25 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 | **DML (Data Modification Language)** | INSERT, UPDATE, DELETE, MERGE, CALL, EXPLAIN PLAN, LOCK       |
 | **DCL (Data Control Language)**      | GRANT, REVOKE                                                 |
 
+**Comments in SQL :** Singleline comment (--), Multiline comment ( /* &nbsp; */ )
 
 **Query(SQL statement) :** &nbsp; **`SELECT colName AS newName FROM tableName WHERE condition;`**
 
-**WHERE** clause allows us to filter data based on specified condition (based on text field or numerical field)
+**Order of Operation : FROM &nbsp;➡️&nbsp; WHERE &nbsp;➡️&nbsp; SELECT**
 
-**AND** keyword will chain all the criterias for filtering, **OR** will create a new filter. When combining **AND** & **OR**, be sure to enclose the individual clauses in parentheses
+**WHERE** clause allows us to filter data based on specified conditions (based on a text field or numerical field)
 
-**NOT** is used to get records where the condition(s) is not true
+**Operator Precedence :** A statement having multiple operators is evaluated based on the priority of operators
+* **Parentheses ( ) &nbsp;➡️&nbsp; Multi. (❋) & Divi. ( ∕ ) &nbsp;➡️&nbsp; Sub. (-) & Add. (+) &nbsp;➡️&nbsp; Concatenation Operators &nbsp;➡️&nbsp; Comparison Conditions &nbsp;➡️&nbsp; IS NULL, LIKE, NOT IN, etc. &nbsp;➡️&nbsp; NOT &nbsp;➡️&nbsp; AND &nbsp;➡️&nbsp; OR**
+* If the operators have equal precedence, then the operators are evaluated directionally, from **Left to Right** or **Right to Left** (**NOT** operator)
 
 **Comparison Operators :** Mostly used with numerical filtering (**＜**, **＞**, **＜＝**, **＞＝**, **＝**, **!＝** or **＜＞**)
+
+**Logical Operators :** **AND**, **OR**, **NOT**
+
+**AND** keyword will chain all the criteria for filtering & **OR** will create a new filter. When combining **AND** & **OR**, be sure to enclose the individual clauses in parentheses
+
+**NOT** is used to get records where the condition(s) is not true
 
 **Aliasing :** Assigning a temporary name to attributes to make the results more readable.
 * Ex. &nbsp; **`SELECT colName AS newName FROM tableName;`**
@@ -77,17 +86,18 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 **MAX** - Returns the Maximum value from a given set of values - **`SELECT MAX(colName) FROM tableName;`**
 
 **SUM** - Returns the Sum of a given set of values - **`SELECT SUM(colName) FROM tableName;`**
-<br>
 
 **CONCAT** - Adds two or more strings - **`SELECT CONCAT(firstName, ' ', lastName) AS name FROM tableName;`**
 
-
+<br>
 <h2 align="center"> 📚 References & Useful Links 🔗</h2>
 
 * [<img align="center" src="https://shields.io/badge/github-Complete_SQL_Database_Bootcamp_Zero_to_Mastery-important?logo=github&style=social" />](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery)
 * [Brief Overview of DB Landscape](https://www.ibm.com/cloud/blog/brief-overview-database-landscape)
 * [12 Rules of CODD (Dr. Edgar Frank Codd - Inventor of RDMBS) ](https://www.w3resource.com/sql/sql-basic/codd-12-rule-relation.php)
 * [Why PostgreSQL is the world's best DB ?](https://www.2ndquadrant.com/en/blog/postgresql-is-the-worlds-best-database/#:~:text=PostgreSQL%20just%20does%20it.,response%20times%20can%20be%20managed.)
-* Command Line 101 - [Mac](https://medium.com/@aechagen/mac-terminal-101-13a3e8e75d4c) | [Linux](https://jgefroh.medium.com/a-beginners-guide-to-linux-command-line-56a8004e2471) | [Windows](http://ifoundthemeaningoflife.com/learntocode/cmd101win)
-* [Aggregate Functions in PostgreSQL](https://www.postgresql.org/docs/current/functions-aggregate.html)
+* Command Line 101 - [Mac](https://medium.com/@aechagen/mac-terminal-101-13a3e8e75d4c) &nbsp;|&nbsp; [Linux](https://jgefroh.medium.com/a-beginners-guide-to-linux-command-line-56a8004e2471) &nbsp;|&nbsp; [Windows](http://ifoundthemeaningoflife.com/learntocode/cmd101win)
 * [How to make comments the most important code you write !](https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write/)
+* [List of Functions & Operators in PostgreSQL](https://www.postgresql.org/docs/current/functions.html)
+* [Lexical Structure & Operator Precedence in PostgreSQL](https://www.postgresql.org/docs/current/sql-syntax-lexical.html)
+* [SQL Expressions & Expression Evaluation Rules](https://www.postgresql.org/docs/current/sql-expressions.html)
