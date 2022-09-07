@@ -24,7 +24,7 @@
 
 **RDBMS** is useful in any project that supports day-to-day activities (**OLTP**) & supports analysis (**OLAP**)
 
-* **OLTP** - OnLine Transactional Processing  &nbsp; | &nbsp; **OLAP** - OnLine Analytical Processing
+* **OLTP :** OnLine Transactional Processing  &nbsp; | &nbsp; **OLAP :** OnLine Analytical Processing
 
 * **Column ≈ Attribute &nbsp; | &nbsp; Row ≈ Tuple**
 
@@ -63,31 +63,40 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 **Comparison Operators :** Mostly used with numerical filtering (**＜**, **＞**, **＜＝**, **＞＝**, **＝**, **!＝** or **＜＞**)
 
 **Logical Operators :** **AND**, **OR**, **NOT**
+* **AND** keyword will chain all the criteria for filtering & **OR** will create a new filter. When combining **AND** & **OR**, be sure to enclose the individual clauses in parentheses
+* **NOT** is used to get records where the condition(s) is not true
 
-**AND** keyword will chain all the criteria for filtering & **OR** will create a new filter. When combining **AND** & **OR**, be sure to enclose the individual clauses in parentheses
+**NULL :** Used to represent a missing or empty value.
+* It is different from zero value or a field that contains spaces
+* No matter what you do (+, -, ❋,&nbsp; ∕ &nbsp;, ＝, !＝) with NULL, it will always be NULL
+* Used for optional & future information that we can keep in the DB
 
-**NOT** is used to get records where the condition(s) is not true
+**NULL value substitution (NULL Coalescing) :** Ability to replace NULL values to operate on data
+* **`SELECT COALESCE(colName1, colName2, ..., 'fallBackValue') AS newName FROM tableName`**
+* **COALESCE** returns the first Non-NULL valued column from the list, otherwise substitutes NULL
+
+**IS :** Allows us to filter on values which are **NULL**, **NOT NULL**, **TRUE**, or **FALSE**
 
 **Aliasing :** Assigning a temporary name to attributes to make the results more readable.
 * Ex. &nbsp; **`SELECT colName AS newName FROM tableName;`**
 
 |                         **Type of Function**                        |       **Examples**        |
 |---------------------------------------------------------------------|---------------------------|
-| **AGGREGATE** - Operates on all the data & produces a single output | AVG, SUM, COUNT, MIN, MAX |
-| **SCALAR(Non-Aggregate)** - Operates on each row independently      | CONCAT                    |
+| **AGGREGATE :** Operates on all the data & produces a single output | AVG, SUM, COUNT, MIN, MAX |
+| **SCALAR(Non-Aggregate) :** Operates on each row independently      | CONCAT                    |
 
 
-**AVG** - Returns the Average of a given set of values - **`SELECT AVG(colName) FROM tableName;`**
+**AVG :** Returns the Average of a given set of values - **`SELECT AVG(colName) FROM tableName;`**
 
-**COUNT** - Returns the Total number of Rows in a table - **`SELECT COUNT(colName) FROM tableName;`**
+**COUNT :** Returns the Total number of Rows in a table - **`SELECT COUNT(colName) FROM tableName;`**
 
-**MIN** - Returns the Minimum value from a given set of values - **`SELECT MIN(colName) FROM tableName;`**
+**MIN :** Returns the Minimum value from a given set of values - **`SELECT MIN(colName) FROM tableName;`**
 
-**MAX** - Returns the Maximum value from a given set of values - **`SELECT MAX(colName) FROM tableName;`**
+**MAX :** Returns the Maximum value from a given set of values - **`SELECT MAX(colName) FROM tableName;`**
 
-**SUM** - Returns the Sum of a given set of values - **`SELECT SUM(colName) FROM tableName;`**
+**SUM :** Returns the Sum of a given set of values - **`SELECT SUM(colName) FROM tableName;`**
 
-**CONCAT** - Adds two or more strings - **`SELECT CONCAT(firstName, ' ', lastName) AS name FROM tableName;`**
+**CONCAT :** Adds two or more strings - **`SELECT CONCAT(firstName, ' ', lastName) AS name FROM tableName;`**
 
 <br>
 <h2 align="center"> 📚 References & Useful Links 🔗</h2>
