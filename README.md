@@ -66,14 +66,16 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 * **AND** keyword will chain all the criteria for filtering & **OR** will create a new filter. When combining **AND** & **OR**, be sure to enclose the individual clauses in parentheses
 * **NOT** is used to get records where the condition(s) is not true
 
-**NULL :** Used to represent a missing or empty value.
-* It is different from zero value or a field that contains spaces
+**NULL :** Used to represent a missing or empty or unknown value.
+* It is different from zero value or a field that contains spaces. Each NULL could be different
 * No matter what you do (+, -, ❋,&nbsp; ∕ &nbsp;, ＝, !＝) with NULL, it will always be NULL
 * Used for optional & future information that we can keep in the DB
 
 **NULL value substitution (NULL Coalescing) :** Ability to replace NULL values to operate on data
 * **`SELECT COALESCE(colName1, colName2, ..., 'fallBackValue') AS newName FROM tableName`**
 * **COALESCE** returns the first Non-NULL valued column from the list, otherwise substitutes NULL
+
+**3 Valued Logic :** Besides **TRUE** or **FALSE**, the result of logical expressions can also be **NULL**
 
 **IS :** Allows us to filter on values which are **NULL**, **NOT NULL**, **TRUE**, or **FALSE**
 
@@ -83,7 +85,7 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 |                         **Type of Function**                        |       **Examples**        |
 |---------------------------------------------------------------------|---------------------------|
 | **AGGREGATE :** Operates on all the data & produces a single output | AVG, SUM, COUNT, MIN, MAX |
-| **SCALAR(Non-Aggregate) :** Operates on each row independently      | CONCAT                    |
+| **SCALAR(Non-Aggregate) :** Operates on each row independently      | CONCAT, COALESCE          |
 
 
 **AVG :** Returns the Average of a given set of values - **`SELECT AVG(colName) FROM tableName;`**
