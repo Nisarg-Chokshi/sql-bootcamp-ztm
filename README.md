@@ -79,13 +79,25 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 **IS :** Allows us to filter on values which are **NULL**, **NOT NULL**, **TRUE**, or **FALSE**
 
-**Aliasing :** Assigning a temporary name to attributes to make the results more readable.
-* Ex. &nbsp; **`SELECT colName AS newName FROM tableName;`**
+**BETWEEN AND :** **`SELECT * FROM tableName WHERE colName BETWEEN v1 AND v2;`**
+
+**IN :** Checks if a value matches any values from a list of values. **`SELECT * FROM tableName WHERE colName IN (v1,v2,v3, ...);`**
+
+**LIKE :** Used for Filtering according to matching patterns. Pattern wildcards are as follows:
+* **% (percentage)** - Used to denote a pattern of any number of characters
+* **_ (underscore)** - Used to denote a pattern of exact one character
+* **In PostgreSQL, *LIKE* keyword can only be used with text comparison. So, we must need to cast whatever we use into text**
+
+**ILIKE :** Used for case insensitive pattern matching
+
+**CAST :** Used to convert a value (of any type) into a specified datatype. **`CAST(colName as TEXT);`** &nbsp; or &nbsp; **`colName::INT;`**
+
+**Aliasing :** Assigning a temporary name to attributes to make the results more readable. **`SELECT colName AS newName FROM tableName;`**
 
 |                         **Type of Function**                        |       **Examples**        |
 |---------------------------------------------------------------------|---------------------------|
 | **AGGREGATE :** Operates on all the data & produces a single output | AVG, SUM, COUNT, MIN, MAX |
-| **SCALAR(Non-Aggregate) :** Operates on each row independently      | CONCAT, COALESCE          |
+| **SCALAR(Non-Aggregate) :** Operates on each row independently      | CONCAT, COALESCE, CAST    |
 
 
 **AVG :** Returns the Average of a given set of values - **`SELECT AVG(colName) FROM tableName;`**
