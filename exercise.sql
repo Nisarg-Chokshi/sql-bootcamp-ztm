@@ -56,12 +56,12 @@
     -- dbName: Store
     -- tableName: customers
     -- question: Select people either under 30 or over 50 with an income above 50000, include people that are 50 that are from either Japan or Australia
-    SELECT * FROM customers WHERE income > 50000 AND (age < 30 OR age >= 50) AND (country = 'Japan' OR country = 'Australia')
+    SELECT * FROM customers WHERE income > 50000 AND (age < 30 OR age >= 50) AND (country = 'Japan' OR country = 'Australia');
 
     -- dbName: Store
     -- tableName: orders
     -- question: What was our total sales in June of 2004 for orders over 100 dollars?
-    SELECT SUM(totalamount) FROM orders WHERE orderdate >= '2004-06-01' AND orderdate <='2004-06-30' AND totalamount > 100
+    SELECT SUM(totalamount) FROM orders WHERE orderdate >= '2004-06-01' AND orderdate <='2004-06-30' AND totalamount > 100;
 
 --
 -- ----------------------- TOPIC NAME - NULL VALUES -----------------------
@@ -80,7 +80,8 @@
     -- dbName: Store
     -- tableName: customers
     -- question: adjust the following query to display the null values as "No Address"
-    SELECT address2 FROM customers SELECT COALESCE(address2, 'No Address') FROM customers
+    -- SELECT address2 FROM customers
+    SELECT COALESCE(address2, 'No Address') FROM customers;
 
     -- dbName: Store
     -- tableName: customers
@@ -91,8 +92,8 @@
     -- dbName: Store
     -- tableName: customers
     -- question: Fix the following query to apply proper 3VL
-    -- SELECT coalesce(lastName, 'Empty'), * FROM customers WHERE (age = NULL);
-    SELECT coalesce(lastName, 'Empty'), * FROM customers WHERE (age IS NULL);
+    -- SELECT COALESCE(lastName, 'Empty'), * FROM customers WHERE (age = NULL);
+    SELECT COALESCE(lastName, 'Empty'), * FROM customers WHERE (age IS NULL);
 
 --
 -- ----------------------- TOPIC NAME - BETWEEN OPERATOR -----------------------
@@ -111,7 +112,7 @@
     -- dbName: Store
     -- tableName: orders
     -- question: How many orders were made by customer 7888, 1082, 12808, 9623
-    SELECT COUNT(orderid) FROM orders WHERE customerid IN (7888, 1082, 12808, 9623)
+    SELECT COUNT(orderid) FROM orders WHERE customerid IN (7888, 1082, 12808, 9623);
 
     -- dbName: World
     -- tableName: city
@@ -146,6 +147,6 @@
     -- dbName: Store
     -- tableName: customers
     -- question: Which states have phone numbers starting with 302? (Replace null values with "No State". Expected output: https://imgur.com/AVe6G4c)
-    SELECT coalesce(state, 'No State') AS "State" FROM customers WHERE phone::TEXT LIKE '302%';
+    SELECT COALESCE(state, 'No State') AS "State" FROM customers WHERE phone::TEXT LIKE '302%';
 
 --

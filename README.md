@@ -56,6 +56,8 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 **WHERE** clause allows us to filter data based on specified conditions (based on a text field or numerical field)
 
+**Aliasing :** Assigning a temporary name to attributes to make the results more readable - **`SELECT colName AS newName FROM tableName;`**
+
 **Operator Precedence :** A statement having multiple operators is evaluated based on the priority of operators
 * **Parentheses ( ) &nbsp;➡️&nbsp; Multi. (❋) & Divi. ( ∕ ) &nbsp;➡️&nbsp; Sub. (-) & Add. (+) &nbsp;➡️&nbsp; Concatenation Operators &nbsp;➡️&nbsp; Comparison Conditions &nbsp;➡️&nbsp; IS NULL, LIKE, NOT IN, etc. &nbsp;➡️&nbsp; NOT &nbsp;➡️&nbsp; AND &nbsp;➡️&nbsp; OR**
 * If the operators have equal precedence, then the operators are evaluated directionally, from **Left to Right** or **Right to Left** (**NOT** operator)
@@ -81,7 +83,7 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 **BETWEEN AND :** **`SELECT * FROM tableName WHERE colName BETWEEN v1 AND v2;`**
 
-**IN :** Checks if a value matches any values from a list of values. **`SELECT * FROM tableName WHERE colName IN (v1,v2,v3, ...);`**
+**IN :** Checks if a value matches any values from a list of values - **`SELECT * FROM tableName WHERE colName IN (v1,v2,v3, ...);`**
 
 **LIKE :** Used for Filtering according to matching patterns. Pattern wildcards are as follows:
 * **% (percentage)** - Used to denote a pattern of any number of characters
@@ -90,9 +92,18 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 **ILIKE :** Used for case insensitive pattern matching
 
-**CAST :** Used to convert a value (of any type) into a specified datatype. **`CAST(colName as TEXT);`** &nbsp; or &nbsp; **`colName::INT;`**
+**CAST :** Used to convert a value (of any type) into a specified datatype - **`CAST(colName as TEXT);`** &nbsp; or &nbsp; **`colName::INT;`**
 
-**Aliasing :** Assigning a temporary name to attributes to make the results more readable. **`SELECT colName AS newName FROM tableName;`**
+**Dates, Timestamps & Timezone in DB :**
+* **Timestamp : A date with time & timezone information**
+* **GMT :** Greenwich Mean Time. **It's a timezone**
+* **UTC :** Univeral Time Coordinated or Coordinated Universal Time. **It's a time standard**
+* **`SHOW timezone;`** - Used to check the timezone of session in PostgreSQL
+* **`SET TIME ZONE 'UTC';`** - Used to set the timezone as UTC for the current session
+* **`ALTER USER userName SET TIME ZONE 'UTC';`** - Used to set the timezone for all sessions as UTC for specfic user
+* **PostgreSQL uses ISO-8601 formatting standard for dates**.
+    * Format: **`YYYY-MM-DDTHH:MM:SS+timezone`**
+    * Example: **`2022-09-10T18:04:07+02:00`**
 
 |                         **Type of Function**                        |       **Examples**        |
 |---------------------------------------------------------------------|---------------------------|
@@ -116,11 +127,12 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 <h2 align="center"> 📚 References & Useful Links 🔗</h2>
 
 * [<img align="center" src="https://shields.io/badge/github-Complete_SQL_Database_Bootcamp_Zero_to_Mastery-important?logo=github&style=social" />](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery)
+* [PostgreSQL - List of Functions & Operators](https://www.postgresql.org/docs/current/functions.html)
+* [PostgreSQL - Lexical Structure & Operator Precedence](https://www.postgresql.org/docs/current/sql-syntax-lexical.html)
+* [PostgreSQL - SQL Expressions & Expression Evaluation Rules](https://www.postgresql.org/docs/current/sql-expressions.html)
 * [Brief Overview of DB Landscape](https://www.ibm.com/cloud/blog/brief-overview-database-landscape)
 * [12 Rules of CODD (Dr. Edgar Frank Codd - Inventor of RDMBS) ](https://www.w3resource.com/sql/sql-basic/codd-12-rule-relation.php)
 * [Why PostgreSQL is the world's best DB ?](https://www.2ndquadrant.com/en/blog/postgresql-is-the-worlds-best-database/#:~:text=PostgreSQL%20just%20does%20it.,response%20times%20can%20be%20managed.)
 * Command Line 101 - [Mac](https://medium.com/@aechagen/mac-terminal-101-13a3e8e75d4c) &nbsp;|&nbsp; [Linux](https://jgefroh.medium.com/a-beginners-guide-to-linux-command-line-56a8004e2471) &nbsp;|&nbsp; [Windows](http://ifoundthemeaningoflife.com/learntocode/cmd101win)
 * [How to make comments the most important code you write !](https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write/)
-* [List of Functions & Operators in PostgreSQL](https://www.postgresql.org/docs/current/functions.html)
-* [Lexical Structure & Operator Precedence in PostgreSQL](https://www.postgresql.org/docs/current/sql-syntax-lexical.html)
-* [SQL Expressions & Expression Evaluation Rules](https://www.postgresql.org/docs/current/sql-expressions.html)
+* [UTC time is enough for everyone right ?](https://zachholman.com/talk/utc-is-enough-for-everyone-right)
