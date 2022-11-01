@@ -1,16 +1,16 @@
 <h2 align="center">📝 Notes of SQL & DB BootCamp Course - ZeroToMastery 🧑🏻‍💻</h2>
 
-**DataBase (DB) :** A system (Software + Hardware) that allows a user to store, organize & use the data
+**DataBase (DB) :** A system (Software + Hardware) that allows users to store, organize & use the data
 
-**DataBase Management System (DBMS) :** Software used to define, create, maintain & control access to the DB
+**DataBase Management System (DBMS) :** A software used to define, create, maintain & control access to the DB
 * DBMS ≈ Collection of Data + Methods for Accessing & Manipulating that data
 
-**Relational DBMS (RDBMS) :** Most used, common, popular & useful DBMS. Ex. MySql, PostgreSQL, SQLite, etc.
+**Relational DBMS (RDBMS) :** Most used, common & popular DBMS. Ex. MySQL, PostgreSQL, SQLite, etc.
 
-**Structured Query Language (SQL) :** Programming language used to interact with the DB using query(SQL statement)s.
+**Structured Query Language (SQL) :** A programming language used to interact with the DB using query(SQL statement)s.
 
 **Types of DBs :**
-1. **Relational** (ex. MySQL, PostgreSQL)
+1. **Relational** (ex. MySQL, PostgreSQL, SQLite)
 2. **Document** (ex. MongoDB, CouchDB, Firebase)
 3. **Key-Value** (ex. Redis, DynamoDB)
 4. **Graph** (ex. Neo4j, AWS Neptune)
@@ -69,7 +69,7 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 * **NOT** is used to get records where the condition(s) is not true
 
 **NULL :** Used to represent a missing or empty or unknown value.
-* It is different from zero value or a field that contains spaces. Each NULL could be different
+* It is different from a zero value or a field that contains spaces. Each NULL could be different
 * No matter what you do (+, -, ❋,&nbsp; ∕ &nbsp;, ＝, !＝) with NULL, it will always be NULL
 * Used for optional & future information that we can keep in the DB
 
@@ -87,10 +87,10 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 **LIKE :** Used for Filtering according to matching patterns. Pattern wildcards are as follows:
 * **% (percentage)** - Used to denote a pattern of any number of characters
-* **_ (underscore)** - Used to denote a pattern of exact one character
+* **_ (underscore)** - Used to denote a pattern of exactly one character
 * **In PostgreSQL, *LIKE* keyword can only be used with text comparison. So, we must need to cast whatever we use into text**
 
-**ILIKE :** Used for case insensitive pattern matching
+**ILIKE :** Used for case-insensitive pattern matching
 
 **CAST :** Used to convert a value (of any type) into a specified datatype - **`CAST(colName as TEXT);`** &nbsp; or &nbsp; **`colName::INT;`**
 
@@ -98,9 +98,9 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 * **Timestamp : A date with time & timezone information**
 * **GMT :** Greenwich Mean Time. **It's a timezone**
 * **UTC :** Univeral Time Coordinated or Coordinated Universal Time. **It's a time standard**
-* **`SHOW timezone;`** - Used to check the timezone of session in PostgreSQL
+* **`SHOW timezone;`** - Used to check the timezone of a session in PostgreSQL
 * **`SET TIME ZONE 'UTC';`** - Used to set the timezone as UTC for the current session
-* **`ALTER USER userName SET TIME ZONE 'UTC';`** - Used to set the timezone for all sessions as UTC for specfic user
+* **`ALTER USER userName SET TIME ZONE 'UTC';`** - Used to set the timezone for all sessions as UTC for specific user
 * **PostgreSQL uses ISO-8601 formatting standard for dates**.
     * Format: **`YYYY-MM-DDTHH:MM:SS+timezone`**
     * Example: **`2022-09-10T18:04:07+02:00`**
@@ -135,4 +135,4 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 * [Why PostgreSQL is the world's best DB ?](https://www.2ndquadrant.com/en/blog/postgresql-is-the-worlds-best-database/#:~:text=PostgreSQL%20just%20does%20it.,response%20times%20can%20be%20managed.)
 * Command Line 101 - [Mac](https://medium.com/@aechagen/mac-terminal-101-13a3e8e75d4c) &nbsp;|&nbsp; [Linux](https://jgefroh.medium.com/a-beginners-guide-to-linux-command-line-56a8004e2471) &nbsp;|&nbsp; [Windows](http://ifoundthemeaningoflife.com/learntocode/cmd101win)
 * [How to make comments the most important code you write !](https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write/)
-* [UTC time is enough for everyone right ?](https://zachholman.com/talk/utc-is-enough-for-everyone-right)
+* [UTC is enough for everyone right ?](https://zachholman.com/talk/utc-is-enough-for-everyone-right)
