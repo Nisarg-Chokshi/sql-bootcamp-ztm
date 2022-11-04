@@ -7,7 +7,7 @@
 
 **Relational DBMS (RDBMS) :** Most used, common & popular DBMS. Ex. MySQL, PostgreSQL, SQLite, etc.
 
-**Structured Query Language (SQL) :** A programming language used to interact with the DB using query(SQL statement)s.
+**Structured Query Language (SQL) :** A programming language used to interact with the DB using query(SQL statement)s
 
 **Types of DBs :**
 1. **Relational** (ex. MySQL, PostgreSQL, SQLite)
@@ -16,9 +16,9 @@
 4. **Graph** (ex. Neo4j, AWS Neptune)
 5. **Wide Columnar** (ex. Apache Casandra, Google Big Table)
 
-**Declarative language :** Developer describes **WHAT** should happen, not necessarily how to get it (Ex. SQL, Python)
+**Declarative Language :** Developer describes **WHAT** should happen, not necessarily how to get it (Ex. SQL, Python)
 
-**Imperative language :** Developer describes **HOW** should happen step by step (Ex. JAVA, Python)
+**Imperative Language :** Developer describes **HOW** should happen step by step (Ex. JAVA, Python)
 
 **DB Models :** Used to determine the logical structure of a DB. Ex. **Hierarchical**, **Networking**, **Entity-Relationship (ER)**, **Relational**, **Object-Oriented**, **Flat**, **Semi-Structured** & many more
 
@@ -28,11 +28,11 @@
 
 * **Column ≈ Attribute &nbsp; | &nbsp; Row ≈ Tuple**
 
-* **Collection of Columns = DEGREE of a Relation(table)**
+* **Collection of Columns** = **DEGREE** of a Relation(table)
 
-* **Collection of Row(Tuple)s = CARDINALITY of a Relation(table)**
+* **Collection of Row(Tuple)s** = **CARDINALITY** of a Relation(table)
 
-* **Domain/Constraint of Attributes = Type of Data that can be stored in a Column**
+* **Domain/Constraint of Attribute = Type of Data that can be stored in a Column**
 
 * **FOREIGN key** will reference the **PRIMARY key** of a different table, therefore allowing relationship among data
 <br>
@@ -68,7 +68,7 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 * **AND** keyword will chain all the criteria for filtering & **OR** will create a new filter. When combining **AND** & **OR**, be sure to enclose the individual clauses in parentheses
 * **NOT** is used to get records where the condition(s) is not true
 
-**NULL :** Used to represent a missing or empty or unknown value.
+**NULL :** Used to represent a missing or empty or unknown value
 * It is different from a zero value or a field that contains spaces. Each NULL could be different
 * No matter what you do (+, -, ❋,&nbsp; ∕ &nbsp;, ＝, !＝) with NULL, it will always be NULL
 * Used for optional & future information that we can keep in the DB
@@ -107,13 +107,13 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 |                         **Type of Function**                        |       **Examples**        |
 |---------------------------------------------------------------------|---------------------------|
-| **AGGREGATE :** Operates on all the data & produces a single output | AVG, SUM, COUNT, MIN, MAX |
-| **SCALAR(Non-Aggregate) :** Operates on each row independently      | CONCAT, COALESCE, CAST    |
+| **AGGREGATE :** Operates on all the records & produces a single output | AVG, SUM, COUNT, MIN, MAX |
+| **SCALAR(Non-Aggregate) :** Operates on each record independently      | CONCAT, COALESCE, CAST    |
 
 
 **AVG :** Returns the Average of a given set of values - **`SELECT AVG(colName) FROM tableName;`**
 
-**COUNT :** Returns the Total number of Rows in a table - **`SELECT COUNT(colName) FROM tableName;`**
+**COUNT :** Returns the total number of records in a table - **`SELECT COUNT(colName) FROM tableName;`**
 
 **MIN :** Returns the Minimum value from a given set of values - **`SELECT MIN(colName) FROM tableName;`**
 
@@ -121,18 +121,19 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 **SUM :** Returns the Sum of a given set of values - **`SELECT SUM(colName) FROM tableName;`**
 
-**CONCAT :** Adds two or more strings - **`SELECT CONCAT(firstName, ' ', lastName) AS name FROM tableName;`**
+**CONCAT :** Adds two or more values - **`SELECT CONCAT(firstName, ' ', lastName) AS name FROM tableName;`**
 
 <br>
 <h2 align="center"> 📚 References & Useful Links 🔗</h2>
 
-* [<img align="center" src="https://shields.io/badge/github-Complete_SQL_Database_Bootcamp_Zero_to_Mastery-important?logo=github&style=social" />](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery)
-* [PostgreSQL - List of Functions & Operators](https://www.postgresql.org/docs/current/functions.html)
-* [PostgreSQL - Lexical Structure & Operator Precedence](https://www.postgresql.org/docs/current/sql-syntax-lexical.html)
-* [PostgreSQL - SQL Expressions & Expression Evaluation Rules](https://www.postgresql.org/docs/current/sql-expressions.html)
-* [Brief Overview of DB Landscape](https://www.ibm.com/cloud/blog/brief-overview-database-landscape)
-* [12 Rules of CODD (Dr. Edgar Frank Codd - Inventor of RDMBS) ](https://www.w3resource.com/sql/sql-basic/codd-12-rule-relation.php)
-* [Why PostgreSQL is the world's best DB ?](https://www.2ndquadrant.com/en/blog/postgresql-is-the-worlds-best-database/#:~:text=PostgreSQL%20just%20does%20it.,response%20times%20can%20be%20managed.)
-* Command Line 101 - [Mac](https://medium.com/@aechagen/mac-terminal-101-13a3e8e75d4c) &nbsp;|&nbsp; [Linux](https://jgefroh.medium.com/a-beginners-guide-to-linux-command-line-56a8004e2471) &nbsp;|&nbsp; [Windows](http://ifoundthemeaningoflife.com/learntocode/cmd101win)
-* [How to make comments the most important code you write !](https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write/)
-* [UTC is enough for everyone right ?](https://zachholman.com/talk/utc-is-enough-for-everyone-right)
+* <a target="_blank" href="https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery"><img align="center" src="https://shields.io/badge/github-Complete_SQL_Database_Bootcamp_Zero_to_Mastery-important?logo=github&style=social" />
+</a>
+* <a target="_blank" href="https://www.postgresql.org/docs/current/functions.html">PostgreSQL - List of Functions & Operators</a>
+* <a target="_blank" href="https://www.postgresql.org/docs/current/sql-syntax-lexical.html">PostgreSQL - Lexical Structure & Operator Precedence</a>
+* <a target="_blank" href="https://www.postgresql.org/docs/current/sql-expressions.html">PostgreSQL - SQL Expressions & Expression Evaluation Rules</a>
+* <a target="_blank" href="https://www.ibm.com/cloud/blog/brief-overview-database-landscape">Brief Overview of DB Landscape</a>
+* <a target="_blank" href="https://www.w3resource.com/sql/sql-basic/codd-12-rule-relation.php">12 Rules of CODD (Dr. Edgar Frank Codd - Inventor of RDMBS</a>
+* <a target="_blank" href="https://www.2ndquadrant.com/en/blog/postgresql-is-the-worlds-best-database">Why PostgreSQL is the world's best DB ?</a>
+* Command Line 101 - <a target="_blank" href="https://medium.com/@aechagen/mac-terminal-101-13a3e8e75d4c">Mac</a> &nbsp;|&nbsp; <a target="_blank" href="https://jgefroh.medium.com/a-beginners-guide-to-linux-command-line-56a8004e2471">Linux</a> &nbsp;|&nbsp; <a target="_blank" href="http://ifoundthemeaningoflife.com/learntocode/cmd101win">Windows</a>
+* <a target="_blank" href="https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write">How to make comments the most important code you write !</a>
+* <a target="_blank" href="https://zachholman.com/talk/utc-is-enough-for-everyone-right">UTC is enough for everyone right ?</a>
