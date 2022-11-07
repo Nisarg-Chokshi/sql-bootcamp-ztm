@@ -59,8 +59,8 @@ In SQL, **"doubleQuotes"** are used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; 
 **Aliasing :** Assigning a temporary name to attributes to make the results more readable - **`SELECT colName AS newName FROM tableName;`**
 
 **Operator Precedence :** A statement having multiple operators is evaluated based on the priority of operators
-* **Parentheses ( ) &nbsp;➡️&nbsp; Multi. (❋) & Divi. ( ∕ ) &nbsp;➡️&nbsp; Sub. (-) & Add. (+) &nbsp;➡️&nbsp; Concatenation Operators &nbsp;➡️&nbsp; Comparison Conditions &nbsp;➡️&nbsp; IS NULL, LIKE, NOT IN, etc. &nbsp;➡️&nbsp; NOT &nbsp;➡️&nbsp; AND &nbsp;➡️&nbsp; OR**
 * If the operators have equal precedence, then the operators are evaluated directionally, from **Left to Right** or **Right to Left** (**NOT** operator)
+![Operator Precedence](/assets/operatorPrecedence.png "Operator Precedence")
 
 **Comparison Operators :** Mostly used with numerical filtering (**＜**, **＞**, **＜＝**, **＞＝**, **＝**, **!＝** or **＜＞**)
 
