@@ -39,7 +39,7 @@
 
 <h2 align="center"> 🔎 SQL Commands, Functions & Queries 🔍</h2>
 
-In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; **'singleQuote'** is used for **TEXT**
+In SQL, **"doubleQuotes"** are used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; **'singleQuote'** is used for **TEXT**
 
 |    **Categories of SQL Commands**    |                           **Clauses**                         |
 |--------------------------------------|---------------------------------------------------------------|
@@ -81,16 +81,16 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 
 **IS :** Allows us to filter on values which are **NULL**, **NOT NULL**, **TRUE**, or **FALSE**
 
-**BETWEEN AND :** **`SELECT * FROM tableName WHERE colName BETWEEN v1 AND v2;`**
+**BETWEEN AND :** **`SELECT * FROM tableName WHERE colName BETWEEN value1 AND value2;`**
 
 **IN :** Checks if a value matches any values from a list of values - **`SELECT * FROM tableName WHERE colName IN (v1,v2,v3, ...);`**
 
-**LIKE :** Used for Filtering according to matching patterns. Pattern wildcards are as follows:
+**LIKE :** Used for Filtering according to matching patterns/ lookups. Pattern wildcards are as follows:
 * **% (percentage)** - Used to denote a pattern of any number of characters
 * **_ (underscore)** - Used to denote a pattern of exactly one character
 * **In PostgreSQL, *LIKE* keyword can only be used with text comparison. So, we must need to cast whatever we use into text**
 
-**ILIKE :** Used for case-insensitive pattern matching
+**ILIKE :** Used for case-insensitive pattern matching/ lookups
 
 **CAST :** Used to convert a value (of any type) into a specified datatype - **`CAST(colName as TEXT);`** &nbsp; or &nbsp; **`colName::INT;`**
 
@@ -126,14 +126,13 @@ In SQL, **"doubleQuotes"** is used for **TABLE** & **COLUMNS** &nbsp; | &nbsp; *
 <br>
 <h2 align="center"> 📚 References & Useful Links 🔗</h2>
 
-* <a target="_blank" href="https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery"><img align="center" src="https://shields.io/badge/github-Complete_SQL_Database_Bootcamp_Zero_to_Mastery-important?logo=github&style=social" />
-</a>
-* <a target="_blank" href="https://www.postgresql.org/docs/current/functions.html">PostgreSQL - List of Functions & Operators</a>
-* <a target="_blank" href="https://www.postgresql.org/docs/current/sql-syntax-lexical.html">PostgreSQL - Lexical Structure & Operator Precedence</a>
-* <a target="_blank" href="https://www.postgresql.org/docs/current/sql-expressions.html">PostgreSQL - SQL Expressions & Expression Evaluation Rules</a>
-* <a target="_blank" href="https://www.ibm.com/cloud/blog/brief-overview-database-landscape">Brief Overview of DB Landscape</a>
-* <a target="_blank" href="https://www.w3resource.com/sql/sql-basic/codd-12-rule-relation.php">12 Rules of CODD (Dr. Edgar Frank Codd - Inventor of RDMBS</a>
-* <a target="_blank" href="https://www.2ndquadrant.com/en/blog/postgresql-is-the-worlds-best-database">Why PostgreSQL is the world's best DB ?</a>
-* Command Line 101 - <a target="_blank" href="https://medium.com/@aechagen/mac-terminal-101-13a3e8e75d4c">Mac</a> &nbsp;|&nbsp; <a target="_blank" href="https://jgefroh.medium.com/a-beginners-guide-to-linux-command-line-56a8004e2471">Linux</a> &nbsp;|&nbsp; <a target="_blank" href="http://ifoundthemeaningoflife.com/learntocode/cmd101win">Windows</a>
-* <a target="_blank" href="https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write">How to make comments the most important code you write !</a>
-* <a target="_blank" href="https://zachholman.com/talk/utc-is-enough-for-everyone-right">UTC is enough for everyone right ?</a>
+* [<img align="center" src="https://shields.io/badge/github-Complete_SQL_Database_Bootcamp_Zero_to_Mastery-important?logo=github&style=social" />](https://github.com/mobinni/Complete-SQL-Database-Bootcamp-Zero-to-Mastery)
+* [PostgreSQL - List of Functions & Operators](https://www.postgresql.org/docs/current/functions.html)
+* [PostgreSQL - Lexical Structure & Operator Precedence](https://www.postgresql.org/docs/current/sql-syntax-lexical.html)
+* [PostgreSQL - SQL Expressions & Expression Evaluation Rules](https://www.postgresql.org/docs/current/sql-expressions.html)
+* [Brief Overview of DB Landscape](https://www.ibm.com/cloud/blog/brief-overview-database-landscape)
+* [12 Rules of CODD (Dr. Edgar Frank Codd - Inventor of RDMBS) ](https://www.w3resource.com/sql/sql-basic/codd-12-rule-relation.php)
+* [Why PostgreSQL is the world's best DB ?](https://www.2ndquadrant.com/en/blog/postgresql-is-the-worlds-best-database/#:~:text=PostgreSQL%20just%20does%20it.,response%20times%20can%20be%20managed.)
+* Command Line 101 - [Mac](https://medium.com/@aechagen/mac-terminal-101-13a3e8e75d4c) &nbsp;|&nbsp; [Linux](https://jgefroh.medium.com/a-beginners-guide-to-linux-command-line-56a8004e2471) &nbsp;|&nbsp; [Windows](http://ifoundthemeaningoflife.com/learntocode/cmd101win)
+* [How to make comments the most important code you write !](https://www.red-gate.com/simple-talk/databases/oracle-databases/how-to-make-comments-the-most-important-code-you-write/)
+* [UTC is enough for everyone right ?](https://zachholman.com/talk/utc-is-enough-for-everyone-right)
